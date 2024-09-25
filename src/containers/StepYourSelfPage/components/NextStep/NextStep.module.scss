@@ -1,0 +1,36 @@
+.container {
+    @include flex-center;
+
+    align-items: flex-end;
+    gap:24px;
+    width: 521px;
+    margin-top: 30px;
+
+    &__text {
+        @include montserat-500-size-24;
+
+        text-align: left;
+    }
+}
+
+@media (max-width: $desktop) {
+    .container {
+        @include flex-center-column;
+
+        gap: 16px;
+        width: 288px;
+        margin: 24px auto 0;
+
+        &__text {
+            @include montserat-400-size-14;
+
+            text-align: center;
+        }
+    }
+}
+
+@media (width >= 375px) and (width <= 1280px) {
+    .container {
+        width: 360px;
+    }
+}

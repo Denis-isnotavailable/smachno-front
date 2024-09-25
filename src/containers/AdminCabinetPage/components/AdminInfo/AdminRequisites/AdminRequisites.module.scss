@@ -1,0 +1,76 @@
+.requisities-box {
+    width: 200px;
+}
+
+.name {
+    @include montserat-400-size-20;
+
+    border: 1px solid $color-orange;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 24px;
+    width: 197px;
+    line-height: 1.1;
+    color: $color-total-black;
+}
+
+.operation-btns-list {
+    &_item:not(:last-child) {
+        margin-bottom: 24px;
+    }
+}
+
+.redact-button {
+    @include flex-center-vert;
+    @include montserat-400-size-16;
+
+    gap: 12px;
+    transition: color $transition-hover;
+
+    .icon {
+        stroke: $color-black;
+        transition: stroke 110ms;
+    }
+
+    &:hover,
+    &:focus {
+        color: $color-orange;
+
+        .icon {
+            stroke: $color-orange;
+        }
+    }
+
+    &:active {
+        .icon {
+            stroke: $color-orange;
+        }
+    }
+
+    &_mark {
+        @include flex-center;
+
+        border: 1px solid $color-black;
+        border-radius: 100px;
+        padding: 2px;
+        width: 24px;
+        height: 24px;
+        color: $color-total-black;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 1;
+        transition: border $transition-hover,
+                    color $transition-hover;
+    }
+
+    &:hover &_mark,
+    &:focus &_mark {
+        border: 1px solid $color-orange;
+        color: $color-orange;
+    }
+
+    &:active &_mark {
+        border: 1px solid $color-orange;
+        color: $color-orange;
+    }
+}

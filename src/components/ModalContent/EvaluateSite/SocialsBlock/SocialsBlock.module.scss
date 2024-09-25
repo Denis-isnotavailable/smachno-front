@@ -1,0 +1,76 @@
+.socials-box,
+.coffee-box {
+    @include flex-center;
+
+    gap: 8px;
+}
+
+.socials-list {
+    display: flex;
+    gap: 8px;
+}
+
+.socials-list_item {
+    @include flex-center;
+}
+
+.socials-list_link {
+    height: 24px;
+
+    & .icon {
+        width: 24px;
+        height: 24px;
+        color: $color-black;
+        border-radius: 50%;
+        transition: color $transition-hover,
+            stroke $transition-hover;
+    }
+
+    &:hover .icon,
+    &:focus .icon {
+        color: $color-orange;
+        stroke: $color-orange;
+    }
+}
+
+.socials-text {
+    width: 122px;
+
+    & p {
+        font-weight: 400;
+        font-size: 14px;
+        color: $color-black;
+    }
+}
+
+.coffee_link {
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: $color-blue-link;
+}
+
+@media (min-width: $desktop) {
+    .socials-box {
+        gap: 16px;
+    }
+
+    .socials-text {
+        width: 272px;
+        text-align: left;
+
+        & p {
+            font-size: 16px;
+        }
+    }
+
+    .coffee_link {
+        font-size: 16px;
+    }
+
+    .coffee-icon {
+        width: 37px;
+        height: 52px;
+    }
+}

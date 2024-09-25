@@ -1,0 +1,40 @@
+.Pagination {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &__page-link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 200%;
+        cursor: pointer;
+    }
+
+    &__next-link,
+    &__previous-link {
+        cursor: pointer;        
+    }
+
+    &__next-link svg {        
+        rotate: 180deg;
+    }
+}
+
+.selected {
+    @include montserat-400-size-16;
+
+    border: 1px solid $color-orange;
+    border-radius: 8px;
+    text-align: center;
+    width: 30px;
+    height: 36px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.disabled .icon {
+    stroke: $color-gray-secondary;
+}

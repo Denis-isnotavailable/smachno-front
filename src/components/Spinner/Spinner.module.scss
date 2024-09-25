@@ -1,0 +1,58 @@
+.container {
+    --d: 5em; /* image size */
+    --rel: 0.2; /* how much extra space between images, 1 = one image size */
+    --r: calc(
+        0.45 * (1 + var(--rel)) * var(--d) / var(--tan)
+    ); /* circle radius */
+    --s: calc(1.5 * var(--r) + var(--d)); /* container size */
+
+    position: relative;
+    width: var(--s);
+    height: var(--s);
+    animation: 20s linear infinite reverse running rotate-ellipse;
+}
+
+.block {
+    --az: calc(var(--i) * 1turn / var(--m));
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: calc(-0.5 * var(--d));
+    width: var(--d);
+    height: var(--d);
+    transform: rotate(var(--az)) translate(var(--r))
+        rotate(calc(-1 * var(--az)));
+
+    & .image {
+        max-width: 100%;
+        height: auto;
+        animation: 10.5s linear infinite reverse running rotate-veggie;
+    }
+}
+
+@keyframes rotate-ellipse {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-veggie {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (width <= 600px) {
+    .container {
+        font-size: 7px;
+    }
+}

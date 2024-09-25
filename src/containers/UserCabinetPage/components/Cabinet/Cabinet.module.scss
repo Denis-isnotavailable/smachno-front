@@ -1,0 +1,53 @@
+.section {
+    padding: 0 24px 32px;
+}
+
+.title-box {
+    padding: 16px 0;
+
+    & h2 {
+        font-weight: 400;
+    }    
+}
+
+.position-title {
+    margin-bottom: 40px;
+
+    & p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1;
+    }
+}
+
+.positions-box {
+    display: none;
+}
+
+@media (min-width: $desktop) {
+    .section {
+        padding: 0 80px 80px;
+    }
+
+    .title-box {
+        height: 80px;
+        padding: 16px 0 40px;
+    }
+
+    .position-title {
+        margin-bottom: 80px;
+
+        & p {
+            font-size: 24px;
+        }
+    }
+
+    .content-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .positions-box {
+        display: block;
+    }
+}

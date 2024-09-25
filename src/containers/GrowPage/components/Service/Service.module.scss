@@ -1,0 +1,60 @@
+@import '@/styles/index';
+
+.service {
+    @include flex-center;
+
+    height: 200px;
+    gap: 40px;
+
+    &__text {
+        width: 546px;
+    }
+
+    &__img {
+        @include flex-center;
+
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.left {
+    flex-direction: row-reverse;
+}
+
+.container__img {
+    @include flex-center;
+
+    width: 200px;
+    height: 200px;
+}
+
+@media (max-width: $desktop) {
+    .service {
+        @include flex-center;
+
+        height: auto;
+        gap: 20px;
+
+        &__text {
+            width: 188px;
+        }
+
+        &__img {
+            @include flex-center;
+
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .container__img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .img {
+        width: 100px;
+        height: 90px;
+    }
+}

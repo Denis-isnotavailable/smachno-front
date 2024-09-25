@@ -1,0 +1,55 @@
+.container {
+    position: relative;
+    padding-bottom: 202px
+}
+
+.slider {
+    @include flex-center;
+
+    gap: 8px;
+}
+
+.active {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.disabled {
+    visibility: hidden;
+}
+
+.img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btnIcon {
+    color: $color-orange;
+    transition: color $transition-hover;
+
+    &:hover {
+        color: $color-orange-disabled;
+    }
+}
+
+.btn {
+    margin: 24px auto 0;
+}
+
+@media (min-width: $tablet) {
+    .container {
+        padding-bottom: 0;
+        padding-bottom: 108px
+    }
+
+    .img {
+        left: 80px;
+        transform: translateX(0);
+    }
+
+    .btn {
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,5 @@
+.main {
+    @include flex-center-column;
+
+    min-height: calc(100vh - 532.5px);
+}

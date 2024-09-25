@@ -1,0 +1,157 @@
+.cart-modal {
+    position: relative;
+    padding: 24px 16px;
+    box-shadow: $shadow-btn;
+}
+
+.close-button-box {
+    position: absolute;
+    z-index: $z-index-modal-content;
+    top: 24px;
+    right: 22px;
+}
+
+.content-box {
+    position: relative;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 230px;
+        height: 1px;
+        background-color: $color-orange;
+    }
+}
+
+.cart-heading {
+    margin-bottom: 32px;    
+
+    & p {
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+.cart-restriction {
+    margin-bottom: 16px;
+}
+
+.cart-button-box {
+    @include flex-center-column;
+
+    gap: 16px;
+}
+
+.cart-total-price {
+    & p {        
+        font-weight: 500;
+        font-size: 20px;
+        color: $color-black;
+    }
+}
+
+.buttons_list {
+    @include flex-center-column;
+    
+    gap: 16px;
+}
+
+.button-cart {
+    width: 215px;
+    min-height: 58px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+button.button-cart_continue {
+    background: $color-white;
+    color: $color-black;
+    border: 1px solid $color-orange;
+}
+
+.modal-content {
+    z-index: $z-index-modal-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    box-shadow: $shadow-card;
+    background-color: $color-white;
+    scale: 0.8;
+    transition: scale $transition-hover;
+
+    &__active {
+        scale: 1;
+    }
+}
+
+@media (min-width: $desktop) {
+    .cart-modal {        
+        width: 845px;
+        padding: 60px 80px 70px;
+    }
+
+    .close-button-box {
+        top: 60px;
+        right: 80px;
+    }
+
+    .content-box {        
+        width: 685px;
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+
+        &::after {
+            width: 180px;
+        }
+    }
+
+    .cart-heading {
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid $color-gray-secondary;
+
+        & p {            
+            text-align: left;
+        }
+    }
+
+    .cart-restriction {
+        margin-bottom: 24px;
+
+        & p {
+            text-align: left;
+        }
+    }
+
+    .cart-button-box {
+        gap: 24px;
+    }
+
+    .cart-total-price {
+        & p {
+            text-align: left;
+            font-size: 24px;
+        }
+    }
+
+    .buttons_list {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .button-cart {
+        min-width: 300px;
+        min-height: auto;
+    }
+
+    .modal-content {        
+        border-radius: 24px;
+    }
+}

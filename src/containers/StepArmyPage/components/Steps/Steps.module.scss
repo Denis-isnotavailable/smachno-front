@@ -1,0 +1,14 @@
+.container {
+    @include flex-center;
+
+    position: relative;
+    gap: 80px;
+}
+
+@media (max-width: $desktop) {
+    .container {
+        gap: 16px;
+    }
+}
+
+

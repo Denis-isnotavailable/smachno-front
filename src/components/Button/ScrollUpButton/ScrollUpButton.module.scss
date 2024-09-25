@@ -1,0 +1,60 @@
+.scroll_button {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: $z-index-modal-bg;
+    width: 40px;
+    height: 60px;
+
+    // border: 2px solid $color-gray-secondary;
+
+    border-radius: 16px;
+    box-shadow: $shadow-card;
+    rotate: 180deg;
+    background-color: rgb(255 209 150 / 15%);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transition: background-color $transition-hover,
+
+                // border-color $transition-hover,
+
+                box-shadow $transition-hover,
+                opacity $transition-hover,
+                visibility $transition-hover,
+                pointer-events $transition-hover;
+
+    &:hover,
+    &:focus {
+        background-color: rgb(255 209 150 / 25%);
+        box-shadow: 0 4px 12px 0 rgb(0 0 0 / 45%);
+        
+        // border-color: $color-orange;
+    }
+
+    &_hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+.image {
+    width: 20px;
+    height: 40px;
+}
+
+@media (min-width: $desktop) {
+    .scroll_button {
+        bottom: 50px;
+        right: calc((100% - $desktop) / 2 + 16px);
+        width: 60px;
+        height: 80px;
+        border-radius: 24px;
+    }
+
+    .image {
+        width: 40px;
+        height: 60px;
+    }
+}

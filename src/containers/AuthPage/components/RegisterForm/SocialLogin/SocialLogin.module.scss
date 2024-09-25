@@ -1,0 +1,28 @@
+.container {
+    @include flex-center;
+
+    position: relative;
+    gap: 16px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+
+.container_google {
+    position: relative;
+}
+
+.img_google {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.btn {
+    opacity: 0;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+}
+

@@ -1,0 +1,23 @@
+.container {    
+    text-align: left;
+
+    &__title {
+        @include montserat-400-size-20;
+    }
+
+    &__text {
+        font-size: 18px;
+        font-weight: 300;
+        color: $color-gray;
+
+    }
+
+    &__error {
+        @include montserat-400-size-14;
+        
+        position: absolute;
+        right: 0;
+        bottom: 100px;
+        color: #F00;
+    }
+}

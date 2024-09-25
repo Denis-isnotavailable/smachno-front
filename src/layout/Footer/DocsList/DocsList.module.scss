@@ -1,0 +1,34 @@
+.docs-list {
+    @include flex-center-vert;
+
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 0;
+    border-top: 1px solid $color-gray;
+    border-bottom: 1px solid $color-gray;
+
+    &_item_link { 
+        @include montserat-500-size-14;
+        
+        color: $color-total-black;
+        transition: color $transition-hover;
+    }
+
+    &_item_link:hover,
+    &_item_link:focus,
+    &_item_link:active {
+        color: $color-orange;
+    }
+}
+
+@media (min-width: $desktop) {
+    .docs-list {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 32px 0;
+
+        &_item_link {
+            @include montserat-500-size-16;
+        }
+    }
+}

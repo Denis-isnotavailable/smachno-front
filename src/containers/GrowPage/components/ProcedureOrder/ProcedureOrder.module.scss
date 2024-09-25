@@ -1,0 +1,37 @@
+.container {
+    @include flex-center-column;
+
+    margin-bottom: 40px;
+
+    &::after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        width: 310px;
+        height: 1px;
+        flex-shrink: 0;
+        background-color: $color-orange;
+    }
+
+    &__title {
+        @include montserat-500-size-24;
+
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: $desktop) {
+    .container {
+        margin-bottom: 24px;
+
+        &::after {
+            width: 288px;
+        }
+
+        &__title {
+            @include montserat-500-size-20;
+
+            margin-bottom: 24px;
+        }
+    }
+}

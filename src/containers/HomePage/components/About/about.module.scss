@@ -1,0 +1,66 @@
+.container {
+    @include flex-center;
+
+
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 32px;
+    column-gap: 24px;
+}
+
+.container>img {
+    width: 60%;
+    height: auto;
+}
+
+
+.text {
+    color: $color-black;
+    font-weight: 400;
+    text-align: left;
+}
+
+.title {
+    padding-bottom: 24px;
+    font-family: var(--font-marmelad);
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.description {
+    & .paragraph {
+        display: block;
+    }
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+@media (min-width: $tablet) {
+    .container>img {
+        width: auto;
+    }
+
+    .text {
+        width: 50%;
+    }
+}
+
+@media (min-width: $desktop) {
+    .container {
+        justify-content: space-between;
+    }
+
+    .text {
+        padding: 0 24px;
+        width: 596px;
+    }
+
+    .title {
+        text-align: left;
+
+        @include marmelad-400-size-20;
+    }
+}

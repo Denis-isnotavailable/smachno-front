@@ -1,0 +1,37 @@
+.image-box {
+    @include flex-center;
+}
+
+.contacts-list {
+    margin-bottom: 16px;
+    text-align: left;
+
+    &_item {
+        @include flex-center-vert;
+
+        gap: 16px;
+
+        @include montserat-500-size-14;
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+@media (min-width: $desktop) {
+    .contacts-list {
+        margin-bottom: 24px;
+        width: 445px;
+
+        &_item {
+            gap: 24px;
+
+            @include montserat-500-size-20;
+
+            &:not(:last-child) {
+                margin-bottom: 18px;
+            }
+        }
+    }
+}

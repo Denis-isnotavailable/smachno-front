@@ -1,0 +1,17 @@
+.productModal__logo {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 142px;
+    height: 142px;
+    padding: 8px 0;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background: $color-white;
+    box-shadow: $shadow-card;
+    overflow: hidden;
+
+    & img {
+        object-fit: contain;
+    }
+}

@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    gap: 24px;
+    margin: 24px 175px 40px 413px;
+
+    &__title {
+        @include montserat-400-size-20;
+
+        text-align: left;
+    }
+
+    &__text {
+        font-size: 18px;
+        font-weight: 300;
+        text-align: left;
+        color: $color-gray;
+
+    }
+}
+
+.container__img {
+    width: 200px;
+    margin-top: 30px;
+}
+
+@media (max-width: $desktop) {
+    .container {
+        max-width: 476px;
+        margin: 16px auto 0;
+        padding: 16px;
+
+        &__title {
+            @include montserat-400-size-14;
+        }
+
+        &__text {
+            font-size: 14px;
+        }
+    }
+
+    .container__img {
+        margin-top: 100px;
+        width: 130px;
+        height: 130px;
+    }
+
+    .img {
+        width: 121px;
+        height: 98px;
+    }
+}

@@ -1,0 +1,22 @@
+.text {
+    color: $color-black;
+    line-height: 1.67;
+
+    @include montserat-400-size-14;
+
+}
+
+
+@media (min-width: $tablet) {
+    .text {
+        @include montserat-400-size-16;
+    }
+}
+
+@media (min-width: $desktop) {
+    .text {
+        line-height: 1.2;
+
+        @include montserat-400-size-20;
+    }
+}

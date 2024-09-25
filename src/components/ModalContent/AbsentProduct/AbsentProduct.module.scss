@@ -1,0 +1,52 @@
+.absent-modal {
+    position: relative;
+    padding: 60px 16px 40px;
+}
+
+.close-button-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.absent-modal-heading {
+    margin-bottom: 12px;
+
+    & p {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1;
+    }    
+}
+
+.image-box {
+    width: 229px;
+    height: 229px;
+    margin: 0 auto 16px;
+}
+
+.appearence-text {
+    margin-bottom: 16px;
+}
+
+@media (min-width: $desktop) {
+    .absent-modal {
+        padding: 124px 138px 80px;
+    }
+
+    .content-box {
+        width: 571px;
+    }
+
+    .close-button-box {
+        top: 60px;
+        right: 60px;
+    }
+
+    .absent-modal-heading {
+        & p {
+            font-size: 32px;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+
+    &_head {
+        background-color: $color-green-light;
+    }
+
+    &_head-th:nth-child(1) {
+        width: 8%;
+    }
+
+    &_head-th:nth-child(2) {
+        width: 16%;
+    }
+
+    &_head-th:nth-child(3) {
+        width: 16%;
+    }
+
+    &_head-th:nth-child(4) {
+        width: 20%;
+    }
+
+    &_head-th:nth-child(5) {
+        width: 25%;
+    }
+
+    &_head-th:nth-child(6) {
+        width: 15%;
+    }
+}
+
+.add-product-button {
+    @include flex-center;
+
+    margin-bottom: 24px;
+    gap: 12px;
+    line-height: 2;
+    transition: color $transition-hover;
+
+    @include montserat-400-size-16;
+
+    &:hover,
+    &:focus {
+        color: $color-orange;
+    }
+
+    &:active {
+        color: $color-orange;
+    }
+
+    &_mark {
+        border: 1px solid $color-black;
+        border-radius: 100px;
+        padding: 5px;
+        width: 42px;
+        height: 42px;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 1;
+        transition: border $transition-hover;
+    }
+
+    &:hover &_mark,
+    &:focus &_mark {
+        border: 1px solid $color-orange;
+    }
+
+    &:active &_mark {
+        border: 1px solid $color-orange;
+    }
+}

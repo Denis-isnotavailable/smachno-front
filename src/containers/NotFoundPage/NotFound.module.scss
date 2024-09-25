@@ -1,0 +1,19 @@
+.container {
+    @include flex-center-column;
+
+    width: 100%;
+    padding: 40px 0;
+}
+
+.title {
+    font-family: var(--font-marmelad);
+    font-size: 128px;
+    font-weight: 400;
+}
+
+.description {
+    font-weight: 500;
+    font-size: 24px;
+    margin: 40px 0;
+}
+

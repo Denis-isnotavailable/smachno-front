@@ -1,0 +1,22 @@
+.personal-box {    
+    color: $color-black;    
+}
+
+.container__img {
+    display: none;
+}
+
+@media (min-width: $desktop) {
+    .personal-box {
+        display: flex;
+        gap: 109px;
+
+        &_form-gap {
+            gap: 86px;
+        }
+    }
+
+    .container__img {
+        display: block;
+    }
+}

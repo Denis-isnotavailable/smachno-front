@@ -1,0 +1,25 @@
+.socials-list {
+    display: flex;
+    gap: 20px;
+}
+
+.socials-list_item {
+    @include flex-center;
+}
+
+.socials-list_link {
+    height: 36px;
+
+    & .icon {
+        color: $color-black;
+        border-radius: 50%;
+        transition: color $transition-hover,
+                    stroke $transition-hover;
+    }
+
+    &:hover .icon,
+    &:focus .icon {
+        color: $color-orange;
+        stroke: $color-orange;
+    }
+}

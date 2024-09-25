@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /* Кольори */
+    --black: #161616;
+    --bluehover: #5811cc;
+    --bluelink: #3e57b1;
+    --gray: #808080;
+    --graylight: #ededed;
+
+    --light-green: #eaf2e1;
+    --orange: #ff8b2e;
+    --orangedisabled: #ffd196;
+    --white: #fdfdfd;
+    --green: #407c23;
+
+    /* Шрифти */
+    --font-marmelad: marmelad;
+    --font-montserrat: montserrat;
+
+    /* Перехід при ховері */
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html,
+body {
+    font-size: 10px;
+    max-width: 100vw;
+    font-family: var(--font-montserrat);
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+
+// Стилі для нотифікашки
+.Toastify__toast-body {
+    gap: 10px;
+    font-family: var(--font-montserrat);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.react-international-phone-input-container {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: Montserrat, sans-serif;
+}
+
+.react-international-phone-input {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: Montserrat, sans-serif;
+}
+
+// Стилі для Select
+@keyframes scale-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.custom-select {
+    &__control {
+        width: 100%;
+        height: 47px !important;
+        font-size: 20px;
+        font-weight: 500;
+        font-family: Montserrat, sans-serif;
+        border-color: #b4b1b1 !important;
+        border-radius: 12px !important;
+        border-style: solid;
+        border-width: 1px;
+        box-shadow: none !important;
+
+        &:hover,
+        &:focus, {
+            border-color: #ff8b2e !important;
+        }
+    }
+
+    &__value-container {
+        cursor: text !important;
+    }
+
+    &__indicator {
+        cursor: pointer !important;
+    }
+
+    &__indicator-separator {
+        display: none !important;
+    }
+
+    &__menu {
+        animation: scaleIn 0.35s ease-in-out;
+    }
+
+    &__option {
+        cursor: pointer !important;
+        color: #808080 !important;
+        font-size: 20px !important;
+        font-weight: 300 !important;
+        font-family: Montserrat, sans-serif !important;
+        background-color: inherit !important;
+        transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out  !important;
+
+        &--is-focused {
+            background-color: #ff8b2e !important;
+            color: #161616 !important;
+        }
+    }
+
+}
+
+@media (max-width: $desktop) {
+    .custom-select {
+        &__control {
+            height: 26px !important;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        &__option {
+            font-size: 14px !important;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.container {
+  padding-bottom: 44px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin: 0 24px 30px;
+  }
+
+  &__icon {
+    transform: rotate(90deg);
+  }
+}
+
+@media (min-width: $desktop) {
+  .container {
+    padding-bottom: 74px;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+      justify-content: center;
+      margin: 0 80px 30px;
+    }
+  }
+}

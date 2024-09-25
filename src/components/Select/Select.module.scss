@@ -1,0 +1,101 @@
+.container {
+    position: relative;
+
+    &__text {
+        margin-bottom: 12px;
+    }
+
+    &__options {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        overflow: scroll;
+        z-index: $z-index-select-order;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid $color-gray;
+        box-shadow: $shadow-btn;
+        background-color: $color-white;
+        cursor: pointer;
+    }
+
+    &__btn {
+        @include montserat-400-size-20;
+
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid $color-gray;
+        cursor: pointer;
+
+        .icon {
+            stroke: $color-gray;
+        }
+
+        &:hover,
+        &:focus {
+            border: 1px solid $color-orange;
+
+            .icon {
+                stroke: $color-orange;
+            }
+        }
+    }
+}
+
+.item {
+    color: #808080;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    transition: color $transition-hover;
+
+    &:hover {
+        cursor: pointer;
+        color: $color-orange;
+    }
+}
+
+.active {
+    color: #161616;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.optionsTop {
+    bottom: 100%;
+}
+
+@media (max-width: $desktop) {
+    .container {
+        &__text {
+            margin-bottom: 6px;
+        }
+
+        &__btn {
+            @include montserat-400-size-14;
+
+            font-size: 14px;
+            padding: 6px 8px;
+        }
+    }
+
+    .item {
+        font-size: 14px;
+
+    }
+
+    .active {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,36 @@
+.order-list {
+    @include montserat-400-size-14;
+
+    &_item {
+        padding: 16px;
+        border: 1px solid $color-gray-secondary;
+        border-radius: 12px;
+    }
+
+    &_item:not(:last-child) {
+        margin-bottom: 12px;
+    }    
+}
+
+.pagination-box {
+    margin-top: 24px;
+}
+
+@media (min-width: $desktop) {
+    .order-list {
+        @include montserat-400-size-18;
+
+        &_item {
+            width: 572px;
+            padding: 4px 12px 12px;
+        }
+
+        &_item:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+
+    .pagination-box {
+        margin-top: 40px;
+    }
+}

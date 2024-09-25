@@ -1,0 +1,41 @@
+//default colors
+$color-black: #161616;
+$color-blue-giver: #5811cc;
+$color-blue-link: #15c;
+$color-gray: #b4b1b1;
+$color-gray-light: #ededed;
+$color-green: #eaf2e1;
+$color-orange: #ff8b2e;
+$color-orange-disabled: #ffd196;
+$color-white: #fdfdfd;
+$color-green-header: #407c23;
+$primary-black: #151514;
+$color-gray-secondary: #808080;
+$color-total-black: #000;
+$color-red: #F00;
+$color-green-light: #eaf2e1;
+
+//font
+$font-marmelad: var(--font-marmelad);
+$font-montserrat: var(--font-montserrat);
+
+//transition
+$transition-hover: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//font-size
+$font-size-xxs: 12px;
+
+//z-index
+$z-index-img-review: 1;
+$z-index-select-order: 1;
+$z-index-modal-bg: 2;
+$z-index-modal-content: 3;
+
+//shadow
+$shadow-btn: 0 4px 4px 0 rgb(0 0 0 / 25%);
+$shadow-card: 0 4px 12px 0 rgb(0 0 0 / 25%);
+
+//breakpoints
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1280px;

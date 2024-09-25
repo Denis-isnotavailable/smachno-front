@@ -1,0 +1,54 @@
+.buttons-list_item {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-list_item:not(:last-child) {    
+    margin-bottom: 16px;
+}
+
+.share-icon {
+    margin-left: 12px;
+    stroke: $color-white;
+    transition: stroke 110ms; // if use common transition - color changes are not synchronize
+}
+
+.footer-button {
+    width: 262px;
+    font-size: 20px;
+    font-weight: 600;
+
+    &:hover .share-icon,
+    &:focus .share-icon {
+        stroke: $color-gray;
+    }
+
+    &:active .share-icon {
+        stroke: $color-white;
+    }
+}
+
+.footer-email {
+    @include montserat-500-size-16;
+
+    height: 20px;
+    color: $color-black;    
+    border-bottom: 1px solid $color-black;
+}
+
+.modal-content {
+    z-index: $z-index-modal-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 24px;
+    box-shadow: $shadow-card;
+    background-color: $color-white;
+    scale: 0.8;
+    transition: scale $transition-hover;
+
+    &__active {
+        scale: 1;
+    }
+}

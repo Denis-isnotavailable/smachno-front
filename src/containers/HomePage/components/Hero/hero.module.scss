@@ -1,0 +1,160 @@
+.container {
+    @include flex-center;
+
+    max-width: 100%;
+    font-size: 10px;
+    overflow: hidden;
+    padding: 7vw 0;
+}
+
+.ellipse {
+    margin: 30px 0;
+    width: 84vw;
+    height: 72vw;
+    border-radius: 50%;
+    background: radial-gradient(53.16% 53.16% at 50% 50%,
+            rgb(169 205 133 / 90%) 0%,
+            rgb(169 205 133 / 0%) 100%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    width: 74%;
+    height: 0;
+    transform-origin: 0% 0%;
+    position: absolute;
+    transform: rotate(calc(45deg * var(--i)));
+    left: 44vw;
+}
+
+.veggies {
+    width: 100%;
+    position: absolute;
+    animation: 20s linear infinite running rotate-ellipse;
+
+    & img {
+        height: auto;
+        animation: 10.5s linear infinite reverse running rotate-veggie;
+        max-width: 25vw;
+    }
+}
+
+.cat {
+    animation: 4s ease-in-out infinite running flying-cat;
+    position: absolute;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25vw;
+}
+
+.shadow {
+    position: absolute;
+    top: 73%;
+    transform: translate(-50%, -50%);
+    filter: blur(4px);
+    animation: 4s ease-in-out infinite running scale-mobile;
+    left: 34%;
+}
+
+
+@keyframes rotate-ellipse {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-veggie {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flying-cat {
+    0%,
+    100% {
+        top: 45%;
+    }
+
+    50% {
+        top: 55%;
+    }
+}
+
+
+@keyframes scale {
+    0%,
+    100% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+
+@keyframes scale-mobile {
+    0%,
+    100% {
+        transform: scale(0.6);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+@media (width <=600px) {
+    .container {
+        font-size: 7px;
+    }
+}
+
+
+@media screen and (width >=500px) {
+    .shadow {
+        left: 40%;
+    }
+}
+
+
+@media (min-width: $tablet) {
+    .container {
+        height: 690px;
+    }
+
+    .ellipse {
+        width: 63em;
+        height: 55em;
+    }
+
+    .block {
+        left: 31em;
+    }
+
+    .veggies img {
+        max-width: 25em;
+    }
+
+    .cat {
+        width: 22em;
+    }
+
+    .shadow {
+        animation: 4s ease-in-out infinite running scale;
+        left: 41%;
+    }
+}

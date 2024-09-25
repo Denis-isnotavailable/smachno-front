@@ -1,0 +1,66 @@
+@mixin button-style($width, $height) {
+    @include flex-center;
+
+    width: $width;
+    height: $height;
+    padding: 10px;
+    border-radius: 24px;
+    background: $color-orange;
+    box-shadow: $shadow-btn;
+    font-family: $font-montserrat;
+    color: $color-white;
+    transition:
+        color $transition-hover,
+        box-shadow $transition-hover,
+        background $transition-hover;
+
+    &:hover,
+    &:focus {
+        color: $color-orange;
+        border: 1px solid $color-orange;
+        background: $color-white;
+    }
+
+    &:active {
+        color: $color-white;
+        color: $color-orange;
+        box-shadow: $shadow-btn inset;
+    }
+
+    &:disabled {
+        pointer-events: none;
+        background: $color-gray-light;
+        color: $color-gray;
+        box-shadow: none;
+
+        & p {
+            opacity: 0.5;
+        }
+    }
+}
+
+.primary {
+    @include button-style(202px, 36px);
+}
+
+.secondary {
+    @include button-style(265px, 36px);
+}
+
+.small {
+    @include button-style(132px, 36px);
+}
+
+.close-icon {
+    transition: stroke $transition-hover;
+
+    .close-button:hover &,
+    .close-button:focus & {
+        stroke: $primary-black;
+    }
+
+    .close-button:active & {
+        stroke: $color-orange;
+    }
+}
+

@@ -1,0 +1,37 @@
+.socials-list {
+    @include flex-center;
+
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.socials-list_item {
+    @include flex-center;
+
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow:
+        0 1px 2px 0 rgba(0 0 0 / 4%),
+        0 4px 4px 0 rgba(0 0 0 / 3%),
+        0 10px 6px 0 rgba(0 0 0 / 2%),
+        0 17px 7px 0 rgba(0 0 0 / 1%),
+        0 27px 7px 0 rgba(0 0 0 / 0%);
+    transition: scale $transition-hover;
+
+    &:hover,
+    &:focus {
+        scale: 1.1;
+    }
+}
+
+.social-image {
+    display: block;
+    width: 56px;
+    height: 56px;
+}
+
+@media (min-width: $desktop) {
+    .socials-list {
+        gap: 32px;
+    }
+}

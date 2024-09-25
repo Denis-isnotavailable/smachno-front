@@ -1,0 +1,161 @@
+.btn_back {
+    @include flex-center;
+
+    gap: 16px;
+    margin-bottom: 24px;
+    font-size: 16px;
+
+    &:hover,
+    &:focus {
+        .icon {
+            stroke-width: 2;            
+        }
+
+        font-weight: 600;
+    }
+
+    &:active {
+        .icon {
+            stroke: $color-orange;            
+        }
+
+        color: $color-orange;
+    }
+}
+
+.form-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.form_list {
+    width: 256px;
+    margin-bottom: 24px;
+
+    &__item_select div {
+        @include montserat-400-size-16;
+    }
+
+    &__item {
+        position: relative;
+
+        & label {
+            gap: 0;            
+
+            & div {
+                margin-bottom: 4px;
+            }
+
+            & div p {                
+                @include montserat-400-size-16;
+            }
+        }
+    }    
+
+    &__item:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+.input {
+    @include montserat-400-size-16;
+
+    padding: 10px;    
+}
+
+.label {
+    @include montserat-400-size-16;
+
+    display: flex;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    transition: color $transition-hover;
+
+    &_text {
+        width: 208px;
+        margin-left: 24px;
+    }
+
+    &:hover &_text,
+    &:focus &_text {
+        color: $color-orange;
+    }
+
+    &_icon_active {
+        stroke: $color-orange;
+    }
+}
+
+.input-checkbox {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.custom-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid $color-black;    
+}
+
+.custom-checkbox::before {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    transform: scale(0);
+    transition: transform $transition-hover,
+                border $transition-hover;
+    content: '';
+    display: inline-block;
+    width: 23px;
+    height: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../../../../../../public/assets/images/success_img.webp');
+}
+
+.input-checkbox:hover+.custom-checkbox,
+.input-checkbox:focus+.custom-checkbox,
+.input-checkbox:active+.custom-checkbox {
+    border: 1px solid $color-orange;
+}
+
+.input-checkbox:checked+.custom-checkbox::before {
+    transform: scale(1);
+}
+
+.input_photo_hide {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    line-height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.error {
+    @include montserat-400-size-14;
+
+    // position: absolute;
+    // left: 0;
+    // bottom: -16px;
+    color: #F00;
+}
+
+.form-btns-list {
+    @include flex-column;
+
+    gap: 16px;
+
+    button {
+        width: 170px;
+    }
+}

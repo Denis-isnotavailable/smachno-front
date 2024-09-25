@@ -1,0 +1,136 @@
+.section {
+    margin-top: 60px;
+    padding: 0 80px 80px;
+}
+
+.container {
+    @include flex-center;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+
+    &__left {
+        width: 453px;
+    }
+
+    &__input {
+        @include flex-left-column;
+
+        gap: 24px;
+    }
+}
+
+.error {
+    @include montserat-400-size-14;
+
+    position: absolute;
+    color: $color-red;
+}
+
+.img {
+    display: block;
+    margin-top: 98px;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.text {
+        @include montserat-400-size-16;
+
+    margin-top: 24px;
+        text-align: left;
+}
+
+.total{
+    @include montserat-500-size-24;
+
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.label {
+    margin-bottom: 12px;
+}
+
+.container__phone {
+    width: 453px;
+
+    /* Стилі для бібліотеки react-international-phone */
+    --react-international-phone-height: 44px;
+    --react-international-phone-font-size: 20px;
+    --react-international-phone-text-color: black;
+    --react-international-phone-border-color: #b4b1b1;
+    --react-international-phone-border-radius: 12px;
+
+    &:hover,
+    &:focus{
+        --react-international-phone-border-color: #ff8b2e;
+    }
+}
+
+@media (max-width: $desktop) {
+    .section {
+        margin: 0;
+        padding: 24px 16px;
+    }
+
+    .container {
+        @include flex-center-column;
+
+        gap: 24px;
+
+        &__left {
+            width: 288px;
+        }
+
+        &__input {
+            @include flex-left-column;
+
+            gap: 12px;
+        }
+    }
+
+    .error {
+        @include montserat-400-size-12;
+
+    }
+
+    .container__phone {
+        width: 288px;
+
+        /* Стилі для бібліотеки react-international-phone */
+        --react-international-phone-font-size: 14px;
+        --react-international-phone-height: 36px;
+        --react-international-phone-font-weight: 400;
+
+    }
+
+    .text {
+        @include montserat-400-size-14;
+
+        margin-top: 12px;
+    }
+
+    .total{
+        @include montserat-500-size-24;
+
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    .container__right {
+        width: 288px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img {
+        margin-top: 24px;
+        width: 160px;
+        height: 130px;
+    }
+
+}

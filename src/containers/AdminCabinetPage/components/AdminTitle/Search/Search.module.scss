@@ -1,0 +1,46 @@
+.search-box {
+    position: relative;
+
+    &_input {
+        @include montserat-400-size-16;
+
+        border: 1px solid $color-gray-secondary;
+        border-radius: 8px;
+        padding: 4px 10px 4px 42px;
+        width: 189px;
+        height: 32px;
+        color: $color-black;
+        transition: border $transition-hover;
+        
+        &:hover {
+            border: 1px solid $color-orange;
+        }
+        
+        &:focus {
+            outline: none;
+            border: 1px solid $color-orange;
+        }
+    }
+
+    &_input::placeholder {
+        @include montserat-300-size-16;
+        
+        color: $color-gray-secondary;
+    }
+
+    &_search-button {
+        position: absolute;
+        top: 4px;
+        left: 10px;
+        transition: stroke $transition-hover;
+
+        &:hover &_icon,
+        &:focus &_icon {
+            stroke: $primary-black;
+        }
+    
+        &:active &_icon {
+            stroke: $color-orange;
+        }
+    }
+}

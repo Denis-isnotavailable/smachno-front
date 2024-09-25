@@ -1,0 +1,45 @@
+.section {
+    padding: 20px 16px;
+}
+
+.text {
+    @include montserat-400-size-12;
+
+    margin-bottom: 16px;
+    text-align: left;
+    text-indent: 20px;
+}
+
+.title {
+    margin-bottom: 16px;
+}
+
+.mark {
+    font-size: 8px;
+    font-weight: 400;
+    font-family: $font-montserrat;
+    vertical-align: middle;
+}
+
+
+
+@media (min-width: $desktop) {
+    .section {
+        padding: 40px 80px;
+    }
+
+    .text {
+        @include montserat-400-size-20;
+
+        margin-bottom: 24px;
+        text-indent: 40px;
+    }
+
+    .title {
+        margin-bottom: 24px;
+    }
+
+    .mark {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,43 @@
+.input {
+    @include montserat-500-size-20;
+
+    padding: 10px 10px 10px 12px;
+    width: 100%;
+    background: none;
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid $color-gray;
+    transition: border $transition-hover;
+
+    &:hover {
+        border: 1px solid $color-orange;
+    }
+
+    &__block {
+        @include flex-left-column;
+
+        gap: 12px;
+    }
+}
+
+.focused {
+    border: 1px solid $color-orange;
+}
+
+.disabled {
+    background-color: whitesmoke;
+    pointer-events: none;
+}
+
+@media (max-width: $desktop) {
+    .input {
+        @include montserat-400-size-14;
+
+        padding: 8px 8px 8px 10px;
+
+        &__block {
+            gap: 8px;
+        }
+    }
+
+}

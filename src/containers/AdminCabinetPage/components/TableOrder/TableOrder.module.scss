@@ -1,0 +1,25 @@
+.table {
+    width: 100%;
+    max-width: 750px;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+
+    &_head {
+        background-color: $color-green-light;        
+    }       
+
+    &_head-th {
+        &__right {
+            text-align: right;
+        }
+
+        &__center {
+            text-align: center;
+        }
+    }
+
+    &_head-th:not(:last-child) {
+        padding-right: 10px;
+    }
+}

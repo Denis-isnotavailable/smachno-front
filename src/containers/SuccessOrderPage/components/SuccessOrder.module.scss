@@ -1,0 +1,46 @@
+.container {
+    @include flex-center-column;
+
+
+    &__img {
+        padding: 19px 71px;
+    }
+
+    &__btn {
+        margin-bottom: 80px;
+    }
+}
+
+.text {
+    @include montserat-400-size-24;
+}
+
+.buttons_list {
+    @include flex-center;
+
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+@media (max-width: $desktop) {
+    .container {
+        &__btn {
+            margin-bottom: 24px;
+        }
+    }
+
+
+    .text {
+        @include montserat-400-size-14;
+    }
+
+    .img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .buttons_list {
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+}

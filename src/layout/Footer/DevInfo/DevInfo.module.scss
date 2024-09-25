@@ -1,0 +1,34 @@
+.dev-line {
+    @include montserat-400-size-12;
+    @include flex-center;
+    
+    flex-wrap: wrap;
+    gap: 4px;
+    width: 288px;
+    margin: 0 auto;
+    padding: 24px 0;
+    color: $color-black;
+    text-align: center;
+
+    &_team {        
+        color: #3d7821;
+    }
+
+    &_heart {
+        @include flex-center;
+        
+        gap: 4px;
+        height: 20px;
+        padding-left: 1px;
+        color: $color-black;
+    }
+}
+
+@media (min-width: $desktop) {
+    .dev-line {
+        @include montserat-400-size-16;
+
+        width: auto;
+        padding: 32px 0;
+    }
+}

@@ -1,0 +1,62 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+
+    &_head {
+        background-color: $color-green-light;
+    }    
+
+    &_body-td {
+        vertical-align: top;
+        padding-bottom: 8px;
+        overflow: hidden;
+        overflow-wrap: break-word;
+    }
+
+    &_head-th:nth-child(1),
+    &_body-td:nth-child(1) {
+        width: 8%;
+    }
+
+    &_head-th:nth-child(2),
+    &_body-td:nth-child(2) {
+        width: 30%;
+    }
+
+    &_head-th:nth-child(3),
+    &_body-td:nth-child(3) {
+        width: 20%;
+    }
+
+    &_head-th:nth-child(4),
+    &_body-td:nth-child(4) {
+        width: 42%;
+    }
+
+    &_head-th:not(:last-child),
+    &_body-td:not(:last-child) {
+        padding-right: 10px;
+    }
+
+    &_body-tr:not(:first-child) &_body-td {
+        padding-top: 32px;
+    }
+
+    &_body-tr:first-child &_body-td {
+        padding-top: 24px;
+    }
+
+    &_body-tr {
+        border-bottom: 1px solid $color-gray-secondary;
+    }
+}
+
+.phone_link {
+    color: $color-black;
+}
+
+.pagination-box {
+    margin-top: 40px;
+}

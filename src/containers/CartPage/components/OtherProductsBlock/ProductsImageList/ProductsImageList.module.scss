@@ -1,0 +1,31 @@
+.products-list {
+    @include flex-center;
+
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.image-box {
+    width: 78px;
+    height: 116px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (min-width: $desktop) {
+    .products-list {        
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    .image-box {
+        width: 140px;
+        height: 210px;
+    }
+}

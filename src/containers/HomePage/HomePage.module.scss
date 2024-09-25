@@ -1,0 +1,68 @@
+.hero {
+    text-align: center;
+}
+
+.cat {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.about {
+    padding-top: 24px;
+}
+
+.faq,
+.slider,
+.cardlist,
+.grow {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+
+
+
+.separator {
+    position: relative;
+
+    &::before {
+        content: '';
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        height: 1px;
+        width: 136px;
+        background-color: var(--orange);
+    }
+}
+
+
+
+@media (min-width: $tablet) {
+    .about {
+        padding-top: 0;
+    }
+
+    .separator {
+        position: static;
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: $desktop) {
+    .cat {
+        padding-top: 0;
+    }
+
+    .faq,
+    .slider,
+    .cardlist,
+    .grow {
+        padding-top: 40px;
+        padding-bottom: 0;
+    }
+}

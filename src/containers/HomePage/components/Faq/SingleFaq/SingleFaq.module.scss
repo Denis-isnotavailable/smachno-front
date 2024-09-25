@@ -1,0 +1,51 @@
+.container {
+    max-width: 1120px;
+
+    &_btn {
+        width: 100%;
+    }
+}
+
+.upperText {
+    padding-bottom: 16px;
+    border-bottom: 1px solid $color-gray;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.lowerText {
+    border-radius: 0 0 12px 12px;
+    background: $color-green;
+    transition: padding 0.2s ease-in-out;
+
+}
+
+.arrow {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.arrowDown {
+    transform: rotate(0.5turn);
+}
+
+.zeroHeight {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.fullHeight {
+    height: auto;
+}
+
+.text-padding {
+    padding: 12px;
+}
+
+
+.align-left {
+    text-align: left;
+}

@@ -1,0 +1,56 @@
+.container {
+    @include flex-column;
+
+    position: relative;
+    gap: 12px;
+
+    &__input {
+        @include montserat-300-size-20;
+
+        border: 1px solid $color-gray;
+        border-radius: 12px;
+        padding: 10px 10px 10px 12px;
+        width: 451px;
+
+        &::placeholder {
+            @include montserat-300-size-20;
+
+            color: $color-gray;
+        }
+
+        &:hover,
+        &:focus {
+            outline: none;
+            border: 1px solid $color-orange;
+        }
+    }
+
+    &__error {
+        @include montserat-400-size-14;
+
+        position: absolute;
+        bottom: -20px;
+        color: $color-red;
+    }
+
+}
+
+@media (max-width: $desktop) {
+    .container__input {
+        @include montserat-400-size-16;
+
+        width: 288px;
+
+        &::placeholder {
+            @include montserat-400-size-14;
+
+            font-weight: 300;
+        }
+    }
+}
+
+@media (width >= 375px) and (width <= 1280px) {
+    .container__input {
+        width: 360px;
+    }
+}

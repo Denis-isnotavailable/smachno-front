@@ -1,0 +1,67 @@
+.evaluate-site-modal {
+    position: relative;
+    padding: 64px 16px 24px;
+}
+
+.close-button-box {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.evaluate-site-heading {
+    margin-bottom: 32px;
+
+    & p {
+        font-family: $font-marmelad;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+    }
+}
+
+.rating-block {
+    margin-bottom: 16px;
+}
+
+.email-block {
+    margin-bottom: 48px;
+}
+
+.button-evaluate-site {
+    width: 258px;
+    margin: 40px auto 0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 0.8;
+}
+
+
+@media (min-width: $desktop) {
+    .evaluate-site-modal {
+        width: 794px;
+        padding: 96px 136px 76px;
+    }
+
+    .evaluate-site-heading {
+        margin-bottom: 64px;
+
+        & p {            
+            font-size: 32px;
+        }
+    }
+
+    .rating-block {
+        margin-bottom: 32px;
+    }
+
+    .email-block {
+        margin-bottom: 40px;
+    }
+
+    .button-evaluate-site {
+        width: 262px;
+        margin-top: 64px;
+    }
+}

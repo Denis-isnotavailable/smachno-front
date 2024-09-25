@@ -1,0 +1,51 @@
+.section {
+    padding: 20px 16px;
+}
+
+.text {
+    @include montserat-400-size-12;
+
+    margin-bottom: 16px;
+    text-align: left;
+    text-indent: 20px;
+
+    &_accent {
+        font-size: 14px;
+    }
+}
+
+.title {
+    margin-bottom: 16px;
+}
+
+.image_box {
+    width: 220px;
+    margin: 0 auto 16px 20px;
+}
+
+
+
+@media (min-width: $desktop) {
+    .section {
+        padding: 40px 80px;
+    }
+
+    .text {
+        font-size: 20px;
+        margin-bottom: 24px;
+        text-indent: 40px;
+
+        &_accent {
+            font-size: 22px;
+        }
+    }
+
+    .title {
+        margin-bottom: 24px;
+    }
+
+    .image_box {
+        width: 220px;
+        margin: 0 auto 24px 40px;
+    }
+}

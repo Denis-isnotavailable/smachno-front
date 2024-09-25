@@ -1,0 +1,35 @@
+.container {
+    margin-bottom: 40px;
+
+    & li:last-child {
+        margin-bottom: 40px;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        width: 310px;
+        height: 1px;
+        flex-shrink: 0;
+        background-color: $color-orange;
+    }
+}
+
+@media (max-width: $desktop) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 0;
+        padding: 0 16px 24px;
+
+        & li:last-child {
+            margin-bottom: 0;
+        }
+
+        &::after {
+            width: 288px;
+         }
+    }
+}

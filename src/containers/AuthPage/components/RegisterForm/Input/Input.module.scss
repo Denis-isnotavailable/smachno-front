@@ -1,0 +1,195 @@
+
+.container {
+    &__item {
+        @include flex-center;
+
+        gap: 24px;
+
+        &:nth-child(odd) {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        &:nth-child(even) {
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+
+    &__item_img {
+        @include flex-center;
+
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.container__input {
+    @include flex-center-column;
+
+    position: relative;
+    width: 468px;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.input {
+    @include montserat-300-size-20;
+
+    position: relative;
+    width: 468px;
+    padding: 10px;
+    margin-left: 0;
+    margin-right: auto;
+    border: none;
+    border-bottom: 1px solid $color-gray;
+    transition: border-bottom $transition-hover;
+
+    &::placeholder {
+        @include montserat-300-size-20;
+
+        color: $color-gray;
+    }
+
+    &:hover,
+    &:focus {
+        outline: none;
+        border-bottom: 1px solid $color-orange;
+    }
+
+}
+
+.label {
+    @include montserat-400-size-20;
+
+    text-align: left;
+}
+
+.container__password {
+    position: relative;
+    width: 100%;
+}
+
+.right {
+    flex-direction: row-reverse;
+}
+
+.btn {
+    @include flex-center;
+
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    transition: stroke $transition-hover;
+
+    &:hover,
+    &:focus {
+        .icon {
+            stroke: $color-orange;
+        }
+    }
+}
+
+.btnRepeat {
+    @include flex-center;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: stroke $transition-hover;
+
+    &:hover,
+    &:focus {
+        .icon {
+            stroke: $color-orange;
+        }
+    }
+}
+
+.error {
+    @include montserat-400-size-14;
+
+    position: absolute;
+    bottom: -20px;
+    color: $color-red;
+}
+
+.errorFirst {
+    @include montserat-400-size-14;
+
+    position: absolute;
+    top: 118px;
+    color: $color-red;
+}
+
+@media (max-width: $desktop) {
+    .container__item {
+        justify-content: space-between;
+    }
+
+    .container__item_img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .img {
+        width: 124px;
+        height: 106px;
+    }
+
+    .container__input {
+        @include flex-center-column;
+
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .label {
+        @include montserat-400-size-14;
+    }
+
+    .input {
+        @include montserat-500-size-12;
+
+        position: relative;
+        width: 100%;
+        padding: 10px 36px 10px 0;
+
+        &::placeholder {
+            @include montserat-400-size-12;
+
+            font-size: 11px;
+            margin-right: 8px;
+        }
+
+    }
+
+    .error {
+        @include montserat-500-size-12;
+
+        font-size: 10px;
+        position: absolute;
+        left: 0;
+        bottom: -14px;
+        color: $color-red;
+    }
+
+    .errorFirst {
+        @include montserat-500-size-12;
+
+        font-size: 10px;
+        position: absolute;
+        left: 0;
+        top: 118px;
+        color: $color-red;
+    }
+
+    .btn {
+        top: 6px;
+    }
+
+    .btnRepeat {
+        top: 6px;
+    }
+
+}

@@ -1,0 +1,30 @@
+.container {
+    @include flex-center-column;
+
+    margin-bottom: 80px;
+
+    &__title {
+        @include montserat-500-size-24;
+
+        margin-bottom: 32px;
+    }
+
+}
+
+@media (max-width: $desktop) {
+    .container {
+        margin-bottom: 24px;
+
+        &__title {
+            @include montserat-500-size-20;
+
+            margin-bottom: 24px;
+        }
+    }
+
+    .img {
+        margin-top: 0;
+        width: 200px;
+        height: 200px;
+    }
+}

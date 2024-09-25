@@ -1,0 +1,11 @@
+.container {
+    @include flex-center-column;
+
+    padding: 10px;
+}
+
+.description {
+    font-size: 20px;
+    margin-top: 40px;
+    white-space: nowrap;
+}

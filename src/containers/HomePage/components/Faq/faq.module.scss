@@ -1,0 +1,44 @@
+.title {
+    padding: 40px 0;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    gap: 16px;
+}
+
+.thumb {
+    margin: 0 auto;
+    margin-top: 24px;
+    width: 166px;
+    height: 124px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: $tablet) {
+    .thumb {
+        margin-top: 64px;
+        width: 200px;
+        height: 142px;
+    }
+}
+
+@media (min-width: $desktop) {
+    .text {
+        margin-top: 40px;
+    }
+
+    .thumb {
+        margin-top: 80px;
+        width: 267px;
+        height: 186px;
+    }
+}

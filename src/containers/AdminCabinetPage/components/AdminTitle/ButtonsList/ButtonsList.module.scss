@@ -1,0 +1,45 @@
+.buttons-list {
+    @include flex-center-vert;
+    
+    gap: 24px;
+    margin-left: auto;
+}
+
+.gs-buttons-list {
+    @include flex-center-vert;
+
+    gap: 8px;
+}
+
+.tool-button {
+    @include montserat-500-size-20;
+    @include flex-center;
+
+    gap: 10px;
+    min-width: 100px;
+    height: 38px;
+    padding: 0 16px;
+    border: 1px solid $color-black;
+    border-radius: 6px;
+    color: $color-black;
+    font-size: 16px;
+    transition: color $transition-hover,
+        border-color $transition-hover,
+        box-shadow $transition-hover;
+
+    &:hover,
+    &:focus {
+        color: $color-orange;
+        border-color: $color-orange;
+    }
+
+    &:active {
+        color: $color-orange;
+        border-color: $color-orange;
+        box-shadow: $shadow-btn;
+    }
+
+    & svg {
+        rotate: 90deg;
+    }
+}

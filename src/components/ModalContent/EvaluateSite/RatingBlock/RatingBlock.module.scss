@@ -1,0 +1,60 @@
+.rating-text {
+    margin-bottom: 8px;
+
+    & p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: $color-black;
+        }
+}
+
+.rating-list {
+    @include flex-center;
+
+    gap: 11.5px;
+}
+
+.button-rate {
+    border-radius: 50%;
+    transition: background-color $transition-hover;
+
+    &_active {
+        background-color: $color-orange;
+    }    
+}
+
+.button-rate:hover,
+.button-rate:focus {
+    background-color: $color-orange;
+}
+
+.rate-icon {
+    transition: scale $transition-hover;    
+}
+
+.button-rate_active .rate-icon {
+    scale: 1.1;
+}
+
+.button-rate:hover .rate-icon,
+.button-rate:focus .rate-icon {    
+    scale: 1.1;
+}
+
+
+
+@media (min-width: $desktop) {
+    .rating-text {
+        margin-bottom: 16px;
+
+        & p {            
+            font-size: 20px;
+        }
+    }
+
+    .rate-icon {
+        width: 68px;
+        height: 68px;
+    }
+}

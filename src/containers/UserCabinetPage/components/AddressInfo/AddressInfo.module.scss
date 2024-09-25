@@ -1,0 +1,99 @@
+.address-box {
+    color: $color-black;
+}
+
+.container__img {
+    display: none;
+}
+
+.address-list {
+    &_item {
+        border: 1px solid #a9a9a9;
+        border-radius: 4px;
+        padding: 16px;
+    }
+
+    &_item:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+.add-reciever-button {
+    @include flex-center;    
+
+    margin-top: 16px;
+    gap: 12px;
+    line-height: 2;
+    transition: color $transition-hover;
+
+    @include montserat-400-size-14;
+
+    &:hover,
+    &:focus {
+        color: $color-orange;
+    }
+
+    &:active {
+        color: $color-orange;
+    }
+
+    &_mark {
+        border: 1px solid $color-black;
+        border-radius: 100px;
+        width: 32px;
+        height: 32px;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 1;
+        transition: border $transition-hover;
+    }
+
+    &:hover &_mark,
+    &:focus &_mark {
+        border: 1px solid $color-orange;
+    }
+
+    &:active &_mark {
+        border: 1px solid $color-orange;
+    }    
+}
+
+@media (min-width: $desktop) {
+    .address-box {
+        display: flex;
+        gap: 52px;
+
+        &_form-gap {
+            gap: 68px;
+        }
+    }
+
+    .container__img {
+        display: block;
+    }
+
+    .address-list {
+        &_item {
+            padding: 0 0 14px;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid $color-gray-secondary;
+        }
+
+        &_item:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    .add-reciever-button {
+        margin-top: 24px;
+
+        @include montserat-400-size-16;
+
+        &_mark {
+            padding: 5px;
+            width: 42px;
+            height: 42px;
+        }
+    }    
+}

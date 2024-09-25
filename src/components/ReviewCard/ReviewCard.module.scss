@@ -1,0 +1,62 @@
+.reviewCard {
+    @include flex-center-column;
+
+    display: block;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 24px;
+    border: 1px solid $color-gray;
+    background-color: $color-white;
+    transition: box-shadow $transition-hover;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        box-shadow: $shadow-card;
+    }
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.link {
+    margin-top: 12px;
+    color: $color-blue-link;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    text-decoration-line: underline;
+    transition:
+        color $transition-hover,
+        font-weight $transition-hover;
+
+    &:hover,
+    &:focus {
+        color: $color-blue-giver;
+        font-weight: 400;
+    }
+
+    &:active {
+        font-weight: 500;
+    }
+}
+
+@media (min-width: $tablet) {
+    .link {
+        margin-top: 16px;
+    }
+
+    .image {
+        height: 292px;
+    }
+}
+
+@media (min-width: $desktop) {
+    .reviewCard {
+        width: 340px;
+    }
+}

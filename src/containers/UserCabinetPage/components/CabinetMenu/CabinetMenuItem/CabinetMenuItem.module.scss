@@ -1,0 +1,60 @@
+.positions-list {
+    &_item {
+        @include montserat-400-size-18;
+
+        margin-bottom: 24px;
+        text-align: left;
+        cursor: pointer;
+        transition: font-weight $transition-hover;
+    }
+
+    &_item:hover,
+    &_item:focus {
+        font-weight: 500;
+    }
+
+    &_item__active {
+        color: $color-orange;
+        font-weight: 500;
+    }
+}
+
+.name-box {
+    @include flex-center-vert;
+
+    justify-content: space-between;
+}
+
+.arrow {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.arrowDown {
+    transform: rotate(0.5turn);
+}
+
+.lowerBox {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    display: none;
+
+    &__active {
+        height: auto;
+        padding: 16px 0;
+        display: block;
+    }
+}
+
+@media (min-width: $desktop) {
+    .arrow {
+        display: none;
+    }
+
+    .lowerBox {
+        &__active {
+            display: none;
+        }
+    }
+}

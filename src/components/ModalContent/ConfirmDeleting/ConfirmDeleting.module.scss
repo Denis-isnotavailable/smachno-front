@@ -1,0 +1,105 @@
+.deleting-modal {
+    position: relative;
+    padding: 48px 24px 24px;
+}
+
+.close-button-box {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.deleting-heading {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $color-orange;
+
+    & p {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1;
+    }
+}
+
+.image-box {
+    width: 182px;
+    height: 152px;
+    margin: 0 auto 32px;
+}
+
+.deleting-btns-list {
+    @include flex-center;
+
+    gap: 16px;
+}
+
+.deleting-button {
+    border-radius: 24px;
+    padding: 9px 15px;
+    width: 88px;
+    box-shadow: $shadow-btn;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 0.8;
+    transition: color $transition-hover,
+        background-color $transition-hover,
+        border $transition-hover,
+        box-shadow $transition-hover;
+
+    &_confirm {
+        border: 1px solid $color-black;
+        color: $color-black;
+
+        &:hover,
+        &:focus {
+            border: 1px solid $color-orange;
+            color: $color-orange;
+        }
+
+        &:active {
+            box-shadow: inset $shadow-btn;
+        }
+    }
+
+    &_abort {
+        background-color: $color-orange;
+        color: $color-white;
+
+        &:hover,
+        &:focus {
+            border: 1px solid $color-orange;
+            background-color: $color-white;
+            color: $color-orange;
+        }
+
+        &:active {
+            box-shadow: inset $shadow-btn;
+        }
+    }
+}
+
+@media (min-width: $desktop) {
+    .deleting-modal {
+        padding: 80px 104px 55px;
+    }
+
+    .close-button-box {
+        top: 24px;
+        right: 24px;
+    }
+
+    .deleting-heading {
+        width: 340px;
+        margin-bottom: 32px;
+        padding-bottom: 24px;
+
+        & p {
+            font-size: 24px;
+            line-height: 0.67;
+        }
+    }
+
+    .deleting-btns-list {
+        gap: 24px;
+    }
+}

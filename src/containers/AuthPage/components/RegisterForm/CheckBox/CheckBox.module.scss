@@ -1,0 +1,73 @@
+.container {
+    @include flex-center;
+
+    gap: 12px;
+    margin-bottom: 40px;
+
+    &__input {
+        opacity: 0;
+    }
+}
+
+.text {
+    @include montserat-300-size-16;
+
+    transition: color $transition-hover;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        color: $color-orange;
+    }
+}
+
+.box {
+    position: absolute;
+    left: -30px;
+    top: -2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 0;
+    border: 1px solid $color-black;
+    transition: border $transition-hover;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        border: 1px solid $color-orange;
+    }
+}
+
+.img {
+    position: absolute;
+    left: -30px;
+    top: -2px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.label {
+    position: relative;
+    margin-left: 100px;
+}
+
+@media (max-width: $desktop) {
+    .container {
+        max-width: 476px;
+        margin: 0 auto;
+        padding: 0 16px 32px 0;
+    }
+
+    .text {
+        @include montserat-300-size-16;
+
+        text-align: left;
+        font-size: 12px;
+    }
+
+    .label {
+        position: relative;
+        margin-left: 22px;
+    }
+}

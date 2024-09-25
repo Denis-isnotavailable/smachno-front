@@ -1,0 +1,155 @@
+.productModal {
+    @include flex-center-column;    
+
+    max-width: 370px;
+    padding: 24px 16px;
+
+    &__title {
+        @include montserat-400-size-20;
+        
+        padding: 16px 0;        
+    }
+
+    &__image {        
+        width: 288px;        
+        height: 150px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    &__desc {
+        padding-top: 16px;
+
+        p {
+            @include montserat-500-size-12;
+
+            line-height: 1.2;
+        }
+    }
+
+    &__details {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;        
+        padding-top: 16px;
+
+        ul {       
+            li { 
+                @include montserat-400-size-12;
+
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                }
+
+                span {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    &__price {
+        @include montserat-500-size-20;
+
+        padding-top: 16px;
+    }
+
+    &__price_quantity {
+        @include montserat-400-size-12;
+    }
+
+    &__btnGroup {
+        @include flex-center-column;
+
+        &-button {
+            padding-top: 16px;
+        }
+    }
+}
+
+.close-button-box {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.post-warning-box {
+    margin-top: 16px;
+}
+
+.post-warning { 
+    & p {
+        font-size: 12px;
+        line-height: 1.1;
+    }
+}
+
+@media (min-width: $desktop) {
+    .productModal {
+        max-width: 470px;
+        padding: 48px 52px 34px;
+
+        &__title {
+            @include montserat-400-size-24;
+
+            padding: 24px 0;
+        }
+
+        &__image {
+            width: 358px;
+            height: 186px;
+        }
+
+        &__desc {
+            padding-top: 24px;
+
+            p {
+                @include montserat-500-size-14;
+            }
+        }
+
+        &__details {
+            padding-top: 24px;
+
+            ul {
+                li {
+                    @include montserat-400-size-14;
+
+                    span {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+
+        &__price {
+            padding-top: 24px;
+        }
+
+        &__price_quantity {
+            @include montserat-400-size-14;
+        }
+
+        &__btnGroup {
+            &-button {
+                padding-top: 24px;
+            }
+        }
+    }
+
+    .close-button-box {
+        top: 24px;
+        right: 24px;
+    }
+
+    .post-warning-box {
+        margin-top: 24px;
+    }
+
+    .post-warning {
+        & p {
+            font-size: 14px;
+        }
+    }
+}

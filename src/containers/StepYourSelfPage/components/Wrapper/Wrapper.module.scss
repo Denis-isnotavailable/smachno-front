@@ -1,0 +1,18 @@
+.container {
+    @include flex-center;
+
+    gap: 77px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+@media (max-width: $desktop) {
+    .container {
+        @include flex-column;
+
+        gap: 24px;
+        margin: 0;
+        padding: 24px 16px;
+    }
+
+}

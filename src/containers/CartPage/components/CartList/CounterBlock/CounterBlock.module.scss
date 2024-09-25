@@ -1,0 +1,49 @@
+.counter-box {
+    width: 100%;
+}
+
+.counter-heading {
+    width: 274px;
+    margin: 0 auto 16px;
+    
+
+    & p {
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+.counter-price {
+    margin-top: 16px;
+
+    & p {
+        font-size: 20px;
+        line-height: 1;
+    }
+}
+
+@media (min-width: $desktop) {
+    .counter-box {
+        width: 441px;
+        padding: 0 42px;
+    }
+
+    .counter-heading {
+        width: auto;
+        margin: 0 0 42px;
+
+        & p {
+            font-size: 24px;
+            font-weight: 500;
+        }
+    }
+
+    .counter-price {
+        margin-top: 24px;
+
+        & p {
+            font-size: 24px;
+            line-height: 1;
+        }
+    }
+}

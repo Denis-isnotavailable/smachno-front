@@ -1,0 +1,152 @@
+.share-modal {
+    position: relative;
+    padding: 60px 16px 40px;
+}
+
+.close-button-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.content-box {   
+    width: 288px;
+    margin-bottom: 16px;
+    color: $primary-black;
+}
+
+.title {
+    margin-bottom: 24px;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 0.88;
+}
+
+.instruction {
+    width: 288px;
+    margin: 0 auto 16px;
+
+    & p {
+        color: $primary-black;
+        font-size: 16px;
+        font-variant-numeric: lining-nums proportional-nums;
+        line-height: 1.75;
+    }    
+}
+
+.alt-description {
+    margin-bottom: 16px;
+}
+
+.link-box {
+    @include flex-center;
+
+    margin: 0 auto;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.copy-link {    
+    width: 100%;
+    display: inline;
+    margin-bottom: 0;
+
+    & p {        
+        font-weight: 600;
+        transition:
+            font-weight $transition-hover,
+            color $transition-hover;
+    }
+    
+}
+
+.link-box:hover .copy-link p,
+.link-box:focus .copy-link p {
+    color: $color-orange;
+}
+
+.link-box:active .copy-link p {
+    color: $color-orange;
+}
+
+.share-icon {
+    stroke: $primary-black;
+    transition: stroke 110ms; // if use common transition - color changes are not synchronize
+}
+
+.link-box:hover .share-icon,
+.link-box:focus .share-icon {
+    stroke: $color-orange;
+}
+
+.link-box:active .share-icon {
+    stroke: $color-orange;
+}
+
+.socials-box {
+    margin-bottom: 24px;
+}
+
+.success-box {
+    position: absolute;
+    top: 63%;
+    left: 42%;
+}
+
+.image-box {
+    width: 171px;
+    height: 140px;
+    margin: 0 auto;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: $desktop) {
+    .share-modal {
+        padding: 124px 162px 80px;
+    }
+
+    .close-button-box {
+        top: 60px;
+        right: 60px;
+    }
+
+    .content-box {
+        width: 514px;
+    }
+
+    .title {
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+    .instruction {
+        width: 302px;
+        margin: 0 auto 24px;
+    }
+
+    .alt-description {
+        margin-bottom: 24px;
+    }
+
+    .copy-link {
+        width: 100%;
+        display: inline;
+        margin-bottom: 0;
+    }
+
+    .socials-box {
+        margin-bottom: 40px;
+    }
+
+    .success-box {
+        top: 477px;
+        left: 395px;
+    }
+}

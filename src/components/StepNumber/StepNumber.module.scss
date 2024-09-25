@@ -1,0 +1,91 @@
+.container {
+    @include flex-center-column;
+
+    gap: 12px;
+
+    &__separator_off {
+        @include flex-center;
+
+        position: relative;
+        width: 70px;
+        height: 70px;
+        border: 1px solid $color-gray;
+        border-radius: 50%;
+
+    }
+
+    &__separator_on {
+        @include flex-center;
+
+        position: relative;
+        width: 70px;
+        height: 70px;
+        border: 1px solid $color-gray;
+        border-radius: 50%;
+
+        &::after {
+            content: '';
+            width: 60px;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: calc(100% + 18px);
+            background-color: $color-orange;
+        }
+    }
+}
+
+.number {
+    @include montserat-400-size-40;
+
+    color: $color-gray-secondary;
+}
+
+.text {
+    @include montserat-400-size-20;
+
+    color: $color-gray-secondary;
+}
+
+.current {
+    color: $color-orange;
+    border-color: $color-orange;
+}
+
+@media (max-width: $desktop) {
+    .container {
+        gap: 8px;
+
+        &__separator_off {
+            width: 42px;
+            height: 42px;
+        }
+
+        &__separator_on {
+            width: 42px;
+            height: 42px;
+
+            &::after {
+                content: '';
+                width: 20px;
+                height: 2px;
+                position: absolute;
+                top: 50%;
+                left: calc(100% + 6px);
+                background-color: $color-orange;
+            }
+        }
+    }
+
+    .number {
+        @include marmelad-400-size-32;
+
+        font-size: 40px;
+    }
+
+    .text {
+        @include montserat-400-size-12;
+
+        font-weight: 600;
+    }
+}

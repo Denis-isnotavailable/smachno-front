@@ -1,0 +1,80 @@
+
+.email-box {
+    @include flex-center;
+
+    gap: 4px;
+}
+
+.image-box {
+    width: 68px;
+    height: 60px;
+}
+
+.image {
+    width: 68px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.email-text {    
+    width: 162px;
+    text-align: left;
+
+    & p {
+        font-weight: 500;
+        font-size: 14px;
+        color: $color-black;
+    }
+}
+
+.desktop-box {
+    display: none;
+}
+
+.mobile-box {
+    text-align: center;
+}
+
+.email {
+    @include montserat-500-size-16;    
+    
+    height: 20px;
+    color: $color-orange;
+}
+
+@media (min-width: $desktop) {
+    .email-box { 
+        gap: 16px;
+    }
+
+    .image-box {
+        width: 98px;
+        height: 98px;
+    }
+
+    .image {
+        width: 98px;
+        height: 98px;
+    }
+
+    .email-text {
+        width: 100%;
+
+        & p {            
+            font-size: 20px;
+        }
+    }
+
+    .desktop-box {
+        display: block;
+        margin-top: 8px;
+    }
+
+    .mobile-box {
+        display: none;
+    }
+
+    .email {
+        font-size: 20px;
+    }
+}

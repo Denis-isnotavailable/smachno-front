@@ -1,0 +1,27 @@
+.order-list {
+    &_item-border:not(:last-child) {
+        padding-bottom: 12px;
+        border-bottom: 1px solid $color-gray-secondary;
+    }
+
+    &_item:not(:last-child) {
+        margin-bottom: 12px;
+    }
+}
+
+.comment-list {
+    &_item {
+        text-align: left;
+        margin-top: 12px;
+    }
+
+    &_item_title {
+        font-weight: 500;
+    }
+}
+
+.payment-status {
+    text-align: left;
+    margin-top: 12px;
+}
+

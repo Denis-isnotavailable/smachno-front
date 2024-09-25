@@ -1,0 +1,47 @@
+.btn {
+    @include flex-center;
+
+    margin-left: 80px;
+
+    &:hover,
+    &:focus {
+        .icon {
+            stroke-width: 2;
+        }
+    }
+
+    &:active {
+        .icon {
+            stroke: $color-orange;
+        }
+    }
+}
+
+.link {
+    display: contents;
+}
+
+@media (max-width: $desktop) {
+    .btn {
+        @include flex-center;
+
+        margin-left: 16px;
+
+        &:hover,
+        &:focus {
+            .icon {
+                stroke-width: 2;
+            }
+        }
+
+        &:active {
+            .icon {
+                stroke: $color-orange;
+            }
+        }
+    }
+
+    .link {
+        display: contents;
+    }
+}

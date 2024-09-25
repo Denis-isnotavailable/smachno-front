@@ -1,0 +1,30 @@
+.container {
+    @include flex-column;
+
+    align-items: flex-start;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.img {
+    display: grid;
+    grid-template-columns: 80px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: $desktop) {
+    .img {
+        grid-template-columns: 40px auto;
+    }
+
+    .img__clock {
+        width: 20px;
+        height: 25px;
+    }
+
+    .img__letter {
+        width: 32px;
+        height: 20px;
+    }
+}

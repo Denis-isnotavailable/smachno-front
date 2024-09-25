@@ -1,0 +1,55 @@
+.container {
+    gap: 24px;
+}
+
+.cart-list {
+    @include flex-column;
+
+    gap: 24px;
+    width: 643px;
+    margin-bottom: 60px;
+
+    &_item {
+        padding: 26px 20px 26px 12px;
+        border: 1px solid  $color-gray;
+        border-radius: 24px;
+    }
+}
+
+.total__price {
+    @include montserat-500-size-24;
+
+    text-align: left;
+}
+
+@media (max-width: $desktop) {
+    .container {
+        @include flex-column;
+
+        gap: 8px;
+    }
+
+    .cart-list {
+        @include flex-column;
+
+        gap: 16px;
+        width: 288px;
+        margin: 0 auto 24px;
+
+        &_item {
+            padding: 8px;
+        }
+    }
+
+    .total__price {
+        @include montserat-500-size-24;
+
+        text-align: center;
+    }
+}
+
+@media (width >= 375px) and (width <= 1280px) {
+    .cart-list {
+        width: 360px;
+    }
+}

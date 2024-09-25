@@ -1,0 +1,76 @@
+.title {
+    width: 100%;
+
+    //padding-top: 16px;
+    padding-bottom: 16px;
+    margin: 0 auto;
+
+    &__text {
+        @include marmelad-400-size-20;
+    }
+}
+
+.content__text {
+    @include montserat-400-size-14;
+
+}
+
+.button__text {
+    font-family: $font-montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+// check dimentions and font size for order according to design (next two classes)
+
+.order__title {
+    padding-bottom: 24px;
+}
+
+.order__text {
+    @include marmelad-400-size-20;
+
+    color: $color-black;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+@media (min-width: $desktop) {
+    .title {
+        width: 1120px;
+        padding-top: 40px;
+        padding-bottom: 32px;
+
+        // padding: 40px 80px 32px;
+
+        &__text {
+            @include marmelad-400-size-32;
+        }
+    }
+
+    .content__text {
+        @include montserat-400-size-20;
+    }
+
+     .order__title {
+         padding-top: 16px;
+         padding-bottom: 40px;
+     }
+
+     .order__text {
+         @include marmelad-400-size-32;
+
+         color: $color-black;
+     }
+}

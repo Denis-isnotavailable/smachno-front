@@ -1,0 +1,88 @@
+.buttons-list {
+    @include flex-center;
+
+    gap: 8px;
+}
+
+.counter-button {
+    @include flex-center;
+    
+    padding: 2px;
+    border-radius: 4px;
+    border: 1px solid $color-gray;
+    color: $color-black;
+    font-family: $font-montserrat;    
+    font-weight: 400;
+    transition:
+        border-color $transition-hover,
+        color $transition-hover;
+
+    &:hover,
+    &:focus {
+        border-color: $color-orange;
+    }
+
+    &:active {
+        color: $color-orange;
+    }
+
+    &_small {
+        width: 22px;
+        height: 22px;
+        font-size: 14px;
+    }
+
+    &_big {
+        width: 34px;
+        height: 34px;
+        font-size: 20px;
+    }
+
+    &_disabled {
+        color: $color-gray;
+        background-color: $color-gray-light;
+        box-shadow: none;
+    }
+}
+
+.counter-input {
+    text-align: center;
+    appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        appearance: none;
+        margin: 0;
+    }
+
+    &::-moz-inner-spin-button,
+    &::-moz-outer-spin-button {
+        appearance: none;
+        margin: 0;
+    }
+
+    &::-ms-inner-spin-button,
+    &::-ms-outer-spin-button {
+        appearance: none;
+        margin: 0;
+    }
+}
+
+@media (min-width: $desktop) {
+    .counter-button {
+        padding: 8px;    
+
+        &_small {
+            width: 34px;
+            height: 34px;
+            padding: 4px;
+            font-size: 20px;
+        }
+
+        &_big {
+            width: 58px;
+            height: 58px;
+            font-size: 32px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.container {
+    @include flex-center-horiz;
+
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: auto;
+    width: 100%;
+
+    .content {
+        text-align: center;
+        width: 100%;
+    }
+}

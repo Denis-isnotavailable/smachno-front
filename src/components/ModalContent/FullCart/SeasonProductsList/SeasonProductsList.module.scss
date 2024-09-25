@@ -1,0 +1,68 @@
+.season-list-heading {
+    margin-bottom: 16px;
+
+    & p {
+        font-size: 20px;
+        font-weight: 500;
+        color: $color-total-black;
+    }
+}
+
+.season-list {
+    display: flex;
+    justify-content: center;    
+    gap: 16px;
+
+    &_wrap {
+        flex-wrap: wrap;
+    }
+
+    // &_item {
+    //     width: 115px;
+    //     height: 152px;
+    //     padding-top: 6px;
+    //     padding-bottom: 16px;
+    //     border-radius: 18px;
+    //     box-shadow: $shadow-card;
+    //     overflow: hidden;
+    // }
+}
+
+// .image-box {
+//     width: 115px;
+//     height: auto;
+// }
+
+// .image {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: contain;
+// }
+
+@media (min-width: $desktop) {
+    .season-list-heading {
+        margin-bottom: 24px;
+    }
+
+    .season-list {
+        gap: 24px;
+
+        &_wrap {
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+
+        // &_item {
+        //     width: 142px;
+        //     height: 188px;
+        //     padding-top: 8px;
+        //     padding-bottom: 20px;
+        //     border-radius: 24px;
+        // }
+    }
+
+    // .image-box {
+    //     width: 142px;
+    //     height: 142px;
+    // }
+}

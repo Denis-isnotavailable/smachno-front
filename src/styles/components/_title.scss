@@ -1,0 +1,11 @@
+.title {
+    text-align: center;
+
+    @include marmelad-400-size-20;
+}
+
+@media (min-width: $desktop) {
+    .title {
+        @include marmelad-400-size-32;
+    }
+}

@@ -1,0 +1,368 @@
+@import 'variables';
+
+.hidden {
+    display: none !important;
+}
+
+.block {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+.gap-10 {
+    gap: 2.5rem;
+}
+
+.gap-12 {
+    gap: 5rem;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+
+    &_lg {
+        @media (min-width: $lg) {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.fz-10p {
+    font-size: 0.625rem; // 10px
+}
+
+.fz-12p {
+    font-size: 0.75rem; // 12px
+}
+
+.fz-14p {
+    font-size: 0.875rem; // 14px
+}
+
+.fz-16p,
+.fz-1rem {
+    font-size: 1rem;
+}
+
+.fz-18p {
+    font-size: 1.125rem; // 18px
+}
+
+.fz-20p {
+    font-size: 1.25rem; // 20px
+}
+
+.fz-22p {
+    font-size: 1.375rem; // 22px
+}
+
+.fz-24p {
+    font-size: 1.5rem; // 24px
+}
+
+.fz-26p {
+    font-size: 1.625rem; // 26px
+}
+
+.fz-32p {
+    font-size: 2rem; // 32px
+}
+
+.fz-36p {
+    font-size: 2.25rem; // 36px
+}
+
+.fz-40p {
+    font-size: 2.5rem; // 40px
+}
+
+.fz-48p {
+    font-size: 3rem; // 48px
+}
+
+.fz-64p {
+    font-size: 4rem; // 64px
+}
+
+.fz-86p {
+    font-size: 5.375rem; // 86px
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.l-height-1 {
+    line-height: 1;
+}
+
+.l-height-1\/1 {
+    line-height: 1.1;
+}
+
+.l-height-1\/2 {
+    line-height: 1.2;
+}
+
+.l-height-1\/4 {
+    line-height: 1.4;
+}
+
+.l-height-1\/5 {
+    line-height: 1.5;
+}
+
+.l-height-1\/6 {
+    line-height: 1.6;
+}
+
+.l-height-2 {
+    line-height: 2;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.color-lightGray {
+    color: $light-text-color;
+}
+
+.color-blue {
+    color: $color-blue;
+}
+
+.color-black {
+    color: $color-black;
+}
+
+.color-white {
+    color: $color-white;
+}
+
+.color-orange {
+    color: $color-orange;
+}
+
+.color-text {
+    color: $default-text-color;
+}
+
+.bg-white {
+    background-color: $color-white;
+}
+
+.bg-lightGray {
+    background-color: $color-light-gray;
+}
+
+.bg-orange {
+    background-color: $color-orange;
+}
+
+.bg-blue {
+    background-color: $color-blue;
+    color: $color-white;
+}
+
+.bg-lightBlue {
+    background-color: #edf0ff;
+}
+
+.bg-peach {
+    background-color: $color-peach;
+}
+
+.transition {
+    transition: all 0.2s linear;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.right-0 {
+    right: 0;
+}
+
+.inset-0 {
+    inset: 0;
+}
+
+.z-1 {
+    z-index: 1;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-1\/4 {
+    width: 25%;
+}
+
+.w-1\/2 {
+    width: 50%;
+
+    &_lg {
+        @media (min-width: $lg) {
+            width: 50%;
+        }
+    }
+}
+
+.border {
+    border: 1px solid;
+}
+
+.border-light {
+    border: 1px solid #e6e7ed;
+}
+
+.rounded-xSmall {
+    border-radius: 0.25rem;
+}
+
+.rounded-small {
+    border-radius: 0.5rem;
+}
+
+.rounded-rem {
+    border-radius: 1rem;
+}
+
+.border-round {
+    border-radius: 50%;
+}
+
+.shadow-light {
+    box-shadow: 0 8px 19px rgb(0 0 0 / 10%);
+}
+
+.shadow-medium {
+    box-shadow: 14px 14px 58px rgb(0 18 86 / 8%);
+}
+
+.shadow-light-gray {
+    box-shadow: 0 16px 40px 0 rgb(0 14 81 / 5%);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+.scroll-bar {
+    ::-webkit-scrollbar {
+        width: 4px;
+        height: 10px;
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 40px;
+        background-color: #e8eaff;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #e8eaff;
+    }
+}

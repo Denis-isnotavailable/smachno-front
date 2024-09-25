@@ -1,0 +1,9 @@
+.cart-section {
+    padding: 0 16px;
+}
+
+@media (min-width: $desktop) {
+    .cart-section {
+        padding: 0 80px;
+    }
+}

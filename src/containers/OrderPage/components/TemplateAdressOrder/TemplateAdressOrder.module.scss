@@ -1,0 +1,34 @@
+.container__input {
+    @include flex-left-column;
+
+    gap: 24px;
+}
+
+.label {
+    margin-bottom: 12px;
+}
+
+.container__phone {
+    width: 453px;
+
+    /* Стилі для бібліотеки react-international-phone */
+    --react-international-phone-height: 44px;
+    --react-international-phone-font-size: 20px;
+    --react-international-phone-text-color: black;
+    --react-international-phone-border-color: #b4b1b1;
+    --react-international-phone-border-radius: 12px;
+}
+
+@media (max-width: $desktop) {
+    .container__input {
+        gap: 12px;
+    }
+
+    .container__phone {
+        width: 288px;
+        --react-international-phone-font-size: 14px;
+        --react-international-phone-height: 36px;
+        --react-international-phone-font-weight: 400;
+    }
+
+}

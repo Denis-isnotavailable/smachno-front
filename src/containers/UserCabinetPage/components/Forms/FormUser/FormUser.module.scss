@@ -1,0 +1,134 @@
+.form_list {
+    margin-bottom: 16px;
+
+    &__item {
+        position: relative;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+.error {
+    @include montserat-400-size-14;
+    
+    color: #F00;
+}
+
+.container__phone {
+    /* Стилі для бібліотеки react-international-phone */
+    --react-international-phone-height: 38px;
+    --react-international-phone-font-size: 14px;
+    --react-international-phone-text-color: black;
+    --react-international-phone-border-color: #b4b1b1;
+    --react-international-phone-border-radius: 12px;
+
+    &:hover,
+    &:focus {
+        --react-international-phone-border-color: #ff8b2e;
+    }
+}
+
+.form-btns-list {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+
+    button {
+        width: 170px;
+    }
+}
+
+.input-checkbox {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.custom-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid $color-black;
+}
+
+.custom-checkbox::before {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    transform: scale(0);
+    transition: transform $transition-hover,
+        border $transition-hover;
+    content: '';
+    display: inline-block;
+    width: 23px;
+    height: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../../../../../../public/assets/images/success_img.webp');
+}
+
+.input-checkbox:hover+.custom-checkbox,
+.input-checkbox:focus+.custom-checkbox,
+.input-checkbox:active+.custom-checkbox {
+    border: 1px solid $color-orange;
+}
+
+.input-checkbox:checked+.custom-checkbox::before {
+    transform: scale(1);
+}
+
+.label {
+    @include montserat-400-size-14;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    text-align: left;
+    cursor: pointer;
+    transition: color $transition-hover;
+
+    &_text {
+        margin-left: 16px;
+    }
+
+    &:hover &_text,
+    &:focus &_text {
+        color: $color-orange;
+    }
+}
+
+@media (min-width: $desktop) {
+    .form_list {
+        width: 357px;
+        margin-bottom: 24px;
+
+        &__item:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    .error {
+        position: absolute;
+        left: 0;
+        bottom: -16px;
+    }
+
+    .container__phone {
+        /* Стилі для бібліотеки react-international-phone */
+        --react-international-phone-height: 44px;
+        --react-international-phone-font-size: 20px;
+    }
+
+    .form-btns-list {
+        flex-direction: row;
+    }
+
+    .label {
+        @include montserat-400-size-20;
+    }
+}

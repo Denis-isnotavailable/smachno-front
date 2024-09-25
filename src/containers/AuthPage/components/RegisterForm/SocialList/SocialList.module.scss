@@ -1,0 +1,34 @@
+.container {
+    @include flex-column;
+
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 24px;
+
+    &__item {
+        @include flex-center;
+
+        gap: 16px;
+    }
+
+
+    &__text {
+        @include montserat-400-size-18;
+
+        color: $color-gray;
+        cursor: pointer;
+        transition: color $transition-hover;
+
+        &:hover,
+        &:focus {
+            color: $color-black;
+        }
+    }
+
+}
+
+.active {
+    @include montserat-400-size-18;
+
+    color: $color-orange;
+}

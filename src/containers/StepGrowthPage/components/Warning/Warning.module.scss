@@ -1,0 +1,42 @@
+.container {
+    @include flex-center;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 372px;
+    margin-top: 40px;
+}
+
+.text {
+    @include montserat-400-size-16;
+
+    width: 322px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+@media (max-width: $desktop) {
+    .container {
+        width: 288px;
+        margin-top: 20px;
+    }
+
+    .text {
+        @include montserat-400-size-12;
+
+        width: 100%;
+        text-align: left;
+        line-height: 1.5;
+    }
+
+    .img {
+        width: 20px;
+        height: 75px;
+    }
+}
+
+@media (width >= 375px) and (width <= 1280px) {
+    .container {
+        width: 360px;
+    }
+}

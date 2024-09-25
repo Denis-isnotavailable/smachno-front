@@ -1,0 +1,44 @@
+.list {
+    @include flex-column;
+
+    gap: 4px;
+    list-style: circle;
+
+    & li:last-child {
+        margin-bottom: 40px;
+    }
+}
+
+.text {
+    @include montserat-400-size-16;
+
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+@media (max-width: $desktop) {
+    .list {
+        list-style: none;
+
+        & li {
+            display: flex;
+            align-items: flex-start;
+            justify-content: left;
+            gap: 6px;
+
+            &::before {
+                content: '-';
+                display: block;
+                margin-top: 4px;
+            }
+        }
+
+        & li:last-child {
+            margin-bottom: 24px;
+        }
+    }
+
+    .text {
+        @include montserat-400-size-14;
+    }
+}
